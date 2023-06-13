@@ -1,0 +1,41 @@
+<div class="app-autocomplete" [ngClass]="{ 'active-width': isSearchActive }">
+  <app-autocomplete
+    [data]="countries"
+    [searchKeyword]="keyword"
+    placeHolder="Enter the company name"
+    iconName="search"
+    (selected)="selectEvent($event)"
+    (inputChanged)="onChangeSearch($event)"
+    (inputFocused)="onFocused($event)"
+    historyIdentifier="countries"
+    [itemTemplate]="itemTemplate"
+    [notFoundTemplate]="notFoundTemplate"
+  >
+  </app-autocomplete>
+
+  <ng-template #itemTemplate let-item>
+    <a [innerHTML]="item.name"></a>
+  </ng-template>
+
+  <ng-template #notFoundTemplate let-notFound>
+    <div [innerHTML]="notFound"></div>
+  </ng-template>
+
+  <input
+    style="width: 100%;line-height: 24px"
+    type="text"
+    class="form-control"
+    placeholder="search doctor"
+  />
+
+  <div
+  class="searchbtn"
+  [ngClass]="{ 'bg-green': isSearchActive }"
+  (click)="toggleSearch()"
+>
+  <i
+    class="fas fa-search"
+    [ngClass]="{ 'color-white': isSearchActive }"
+  ></i>
+</div>
+</div>

@@ -1,0 +1,59 @@
+span {
+  font-family: cursive;
+  display: block;
+  text-align: center;
+}
+.app-autocomplete {
+  position: relative;
+  width: 41px;
+  transition: all 0.5s linear;
+}
+.form-control {
+  text-indent: 20px;
+  line-height: 24px;
+  top: 0px;
+  width: 50% !important;
+  right: 0px;
+  border: 0px;
+  border-left: 1px solid;
+  height: 40px;
+  z-index: 999;
+  position: absolute;
+}
+
+.app-autocomplete.active-width {
+  width: 600px;
+}
+
+.searchbtn {
+  position: absolute;
+  top: 0;
+  right: -1px;
+  background: #fff;
+  z-index: 9999;
+  width: 41px;
+  height: 41px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.5s 0.6s linear;
+}
+
+.searchbtn .fas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #42be11;
+  font-size: 22px;
+  transition: all 0.5s 0.6s linear;
+}
+
+.searchbtn.bg-green {
+  background: #42be11;
+  transition: all 0.2s linear;
+}
+
+.searchbtn .fas.color-white {
+  color: #fff;
+  transition: all 0.2s linear;
+}
